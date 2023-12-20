@@ -42,6 +42,7 @@
 
 
            <a class="navbar-brand" href="#">Online Store</a>
+           
 
 
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -60,16 +61,16 @@
                <div class="navbar-nav ms-auto">
 
 
-                   <a class="nav-link active" href="#">Home</a>
+                   <a class="nav-link active" href="resources\views\index">Home</a>
 
 
-                   <a class="nav-link active" href="#">Products</a>
+                   <a class="nav-link active" href="resources\views\products">Products</a>
 
 
-                   <a class="nav-link active" href="#">Cart</a>
+                   <a class="nav-link active" href="resources\views\cart">Cart</a>
 
 
-                   <a class="nav-link active" href="#">About</a>
+                   <a class="nav-link active" href="resources\views\about">About</a>
 
 
                </div>

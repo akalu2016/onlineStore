@@ -23,3 +23,39 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('about');
 });
+Route::get('/', function () {
+    return view('cart');
+});
+Route::get('/', function () {
+    return view('products');
+});
+Route::get('/post','\App\Http\Controllers\PostController@index');
+Route::get('/show/{id}','\App\Http\Controllers\PostController@show');
+
+/*
+Route::resources(
+    [
+    'post'=>'\App\Http\Controllers\PostController',
+    'student'=>'\App\Http\Controllers\StudentController'
+    ]
+);
+*/
+
+Route::resource('student','\App\Http\Controllers\StudentController',
+    [
+    'only'=> ['create','show']
+    ]
+);
+Route::resource('student','\App\Http\Controllers\StudentController',
+    [
+    'except'=> ['create','show']
+    ]
+);
+Route::get('/text','\App\Http\Controllers\TestController@text');
+Route::get('/tests/view','\App\Http\Controllers\TestController@view');
+Route::get('/tests/jsonarray','\App\Http\Controllers\TestController@jsonarray');
+Route::get('/tests/array','\App\Http\Controllers\TestController@array');
+
+Route::get('/tests/pdf','\App\Http\Controllers\TestController@pdf');
+Route::get('/tests/downloadpdf','\App\Http\Controllers\TestController@downloadpdf');
+Route::get('/tests/image','\App\Http\Controllers\TestController@image');

@@ -1,3 +1,4 @@
+<!doctype html>
 
 
 <html lang="en">
@@ -16,7 +17,7 @@
        crossorigin="anonymous" />
 
 
-   <title>Online Store--About</title>
+   <title>Online Store--cart</title>
 
    <style>
     .bg-secondary{ background-color: blueviolet!important;
@@ -59,18 +60,16 @@
                <div class="navbar-nav ms-auto">
 
 
-               <a class="nav-link active" href="resources\views\index.blade.php">Home</a>
-            
+                   <a class="nav-link active" href="#">Home</a>
 
 
-<a class="nav-link active" href="resources\views\products">Products</a>
+                   <a class="nav-link active" href="#">Products</a>
 
 
-<a class="nav-link active" href="resources\views\cart">Cart</a>
+                   <a class="nav-link active" href="#">Cart</a>
 
 
-<a class="nav-link active" href="resources\views\about">About</a>
-
+                   <a class="nav-link active" href="#">About</a>
 
 
                </div>
@@ -91,7 +90,7 @@
        <div class="container d-flex align-items-center flex-column">
 
 
-           <h2>About The Online Store</h2>
+           <h2>Online Store  cart Page</h2>
 
 
        </div>
