@@ -59,3 +59,5 @@ Route::get('/tests/array','\App\Http\Controllers\TestController@array');
 Route::get('/tests/pdf','\App\Http\Controllers\TestController@pdf');
 Route::get('/tests/downloadpdf','\App\Http\Controllers\TestController@downloadpdf');
 Route::get('/tests/image','\App\Http\Controllers\TestController@image');
+
+Route::get('/pages/contact','\App\Http\Controllers\PagesController@contact');
