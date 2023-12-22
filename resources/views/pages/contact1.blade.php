@@ -52,6 +52,23 @@
        </div>
      </nav>
 
+     <div class="container info">
+       <div class="row">
+
+
+           <div class="card col-lg-3 col-md-3 col-sm-8 text-center mx-auto">
+               <img class="card-img-top rounded-circle" src="https://placehold.co/50" alt="Card image">
+               <div class="card-body">
+                   <h4 class="card-title">{{$name}}</h4>
+                   <br>
+                   <h6>{{$role}} At {{$company}}</h6>
+                   <p> <i> {{$quote}}  </i> </p>
+               </div>
+           </div>
+
+
+       </div>
+   </div>
 
 
      <div class="container info">
@@ -75,7 +92,7 @@
                                <div class="card-body">
                                    <h4 class="card-title"><?php echo $employee1[0] ?></h4>
                                    <br>
-                                   <h6><?php echo $employee1[1] ?> At <?php echo $employee1[2] ?></h6>
+                                   <h6><?php echo $employee2[1] ?> At <?php echo $employee1[2] ?></h6>
                                    <p> <i> <?php echo $employee1[3] ?> </i> </p>
                                </div>
                            </div>

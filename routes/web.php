@@ -20,9 +20,11 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('index');
 });
+/*
 Route::get('/', function () {
     return view('about');
 });
+*/
 Route::get('/', function () {
     return view('cart');
 });
@@ -60,4 +62,13 @@ Route::get('/tests/pdf','\App\Http\Controllers\TestController@pdf');
 Route::get('/tests/downloadpdf','\App\Http\Controllers\TestController@downloadpdf');
 Route::get('/tests/image','\App\Http\Controllers\TestController@image');
 
-Route::get('/pages/contact','\App\Http\Controllers\PagesController@contact');
+Route::get('/pages/display/{view}','\App\Http\Controllers\PagesController@display');
+Route::get('/pages/employees','\App\Http\Controllers\PagesController@employees');
+
+/*Route::get('about','\App\Http\Controllers\HomeController@about')->name("home.about");*/
+
+Route::get('index','\App\Http\Controllers\HomeController@index')->name("home.index");
+
+Route::get('/pages/contact1','\App\Http\Controllers\PagesController@contact1');
+
+

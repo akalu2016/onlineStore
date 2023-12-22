@@ -34,21 +34,21 @@ class TestController extends Controller
     }
     public function  pdf()
     {
-        response()->file(
+       return  response()->file(
         public_path('PDF\laravel.pdf'),
         ['Content-type'=>'application/pdf']);
             }
             
     public function  downloadpdf(){
-        response()->download(
-            public_path('PDF\laravel.pdf'),'laravel site page');
+        return response()->download(
+            public_path('PDF/laravel.pdf'),'laravel site page');
        
     }
 
     
 public function  image(){
-response()->file(
-    public_path('image\profile-picture.jpeg'));
+    return response()->file(
+     public_path('image/profile-picture.jpeg'));
        
     }
 }
