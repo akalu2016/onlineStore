@@ -46,8 +46,29 @@ class PagesController extends Controller
     {
         return view('pages.contact1',['name'=>'Jone Doe',
         'role'=>'Web Developer',
-            "company"=>"XYZ compay",
-           'quote'=>"Pause and ponder in the silence",
+            'company'=>"XYZ compay",
+           'quote'=>"Pause and ponder in the silence"
         ]);
+}
+public function contact2($display)
+    {
+ return view('pages.contact2',
+ ['displaycontact'=>$display,
+        'name'=>'Jone Doe',
+        'role'=>"Web Developer",
+        'company'=>"XYZ compay",
+        'quote'=>"Pause and ponder in the silence"
+        ]);
+}
+public function employee_list_for()
+{
+   
+    $employees=  [
+        ['Jone Doe1','Web Developer','ABC compay','fusce porta','maruise cxzcz mmgh'],
+        ['Jone Doe2','Web Developer1222','ABC compay222','fusce porta22','maruise cxzcz mmgh22'],
+        ['Jone Doe3','Web Developer33','ABC compay33','fusce porta33','maruise cxzcz mmgh33']
+    ];  
+    return view('pages.employee_list_for')->with('employees',$employees);
+    //
 }
 }

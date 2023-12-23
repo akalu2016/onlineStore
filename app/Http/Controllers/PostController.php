@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -68,9 +69,11 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update()
     {
         //
+        $updated=DB::update('update posts set title="software tester" where id=?',[1]);
+        return $updated;
     }
 
     /**
@@ -81,6 +84,26 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
+        //
+    }
+    public function insert()
+    {
+        DB::insert('insert into posts(title,body) values(?,?)',
+        ['software developer','jone does is software developer'] );
+        //
+    }
+    public function select()
+    {
+        $results=DB::select('select * from posts where id=?',[1]);
+
+        foreach($results as $posts)
+        {
+            echo"title is :".$posts->title;
+            echo"<br>";
+            echo"body is :".$posts->body;
+            echo"body is :".$posts->body;
+        }
+        
         //
     }
 }

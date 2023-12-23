@@ -71,4 +71,19 @@ Route::get('index','\App\Http\Controllers\HomeController@index')->name("home.ind
 
 Route::get('/pages/contact1','\App\Http\Controllers\PagesController@contact1');
 
+Route::get('/pages/contact2/{display}','\App\Http\Controllers\PagesController@contact2');
 
+Route::get('/pages/employee_list_for','\App\Http\Controllers\PagesController@employee_list_for');
+
+
+Route::get('/home','\App\Http\Controllers\HomeController@index');
+Route::get('/pages/employee_list_for','\App\Http\Controllers\PagesController@employee_list_for');
+
+Route::get('/home/employees','\App\Http\Controllers\HomeController@employee_list');
+Route::get('/home/newmenu','\App\Http\Controllers\HomeController@AddNewMenu');
+
+Route::get('about','\App\Http\Controllers\HomeController@about')->name("home.about");
+
+Route::get('/posts/insert','\App\Http\Controllers\PostController@insert');
+Route::get('/posts/select','\App\Http\Controllers\PostController@select');
+Route::get('/posts/update','\App\Http\Controllers\PostController@update');
